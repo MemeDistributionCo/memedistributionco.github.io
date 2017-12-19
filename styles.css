@@ -1,0 +1,31 @@
+/*
+    Colors:
+      #000
+      #fff
+      #1263e5
+      #3edb0f
+      #515151
+      #bababa
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.nav .navbar {
+    background-color: #bababa
+}
+
+.navbar li {
+    padding:5;
+    display:inline-block;
+}
+
+body {
+    background-color: #000
+}
+
+body > div {
+    background-color: #515151
+}
