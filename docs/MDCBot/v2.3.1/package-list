@@ -1,0 +1,7 @@
+com.mdc.bot
+com.mdc.bot.command
+com.mdc.bot.command.game
+com.mdc.bot.reaction
+com.mdc.bot.util
+com.mdc.bot.util.event
+com.mdc.bot.util.exception
