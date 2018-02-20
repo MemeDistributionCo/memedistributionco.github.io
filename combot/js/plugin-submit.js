@@ -38,6 +38,34 @@ function getTags() {
     return tags;
 }
 
+function fixText(text) {
+    while(text.indexOf('<') != -1) {
+        var index = text.indexOf('<');
+        var newText = text.substr(0,index);
+        newText+="&lt;";
+        newText+=text.substr(index+1);
+        text = newText;
+        console.log(text);
+    }
+    
+    while(text.indexOf('>') != -1) {
+        var index = text.indexOf('>');
+        var newText = text.substr(0,index);
+        newText+="&gt;";
+        newText+=text.substr(index+1);
+        text = newText;
+    }
+    
+    while(text.indexOf('`') != -1) {
+        var index = text.indexOf('`');
+        var newText = text.substr(0,index);
+        newText+="&#96;";
+        newText+=text.substr(index+1);
+        text = newText;
+    }
+    return text;
+}
+
 function uploadForm() {
     firebase.auth().onAuthStateChanged(function(user) {
         if(user) {
@@ -45,6 +73,7 @@ function uploadForm() {
             var plName = $("#plname").val();
             var plDesc = $("#pldesc").val();
             var plInfo = $("#plinfo").val();
+            plInfo = fixText(plInfo);
             var file = $("#jarfile")[0].files[0];
             if(file.size/1024/1024 > 2) {
                 alert("File too large. Send me a message and we can talk about it");
