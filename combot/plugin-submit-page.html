@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Submit Plugin
+        </title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" type="text/css"/>
+        <script
+  src="http://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.10.0/firebase.js"></script>
+        <script>
+          // Initialize Firebase
+          var config = {
+            apiKey: "AIzaSyDMtD_eM0cebwnJWLXynMLige850l28lCg",
+            authDomain: "plugin-combot.firebaseapp.com",
+            databaseURL: "https://plugin-combot.firebaseio.com",
+            projectId: "plugin-combot",
+            storageBucket: "plugin-combot.appspot.com",
+            messagingSenderId: "1011557150803"
+          };
+          firebase.initializeApp(config);
+        </script>
+        <link rel="stylesheet" href="css/main.css" type="text/css"/>
+        <script src="js/plugin-submit.js"></script>
+    </head>
+    <body>
+        <div style="height:300px;">
+            <!-- Everything that goes before the main content -->
+        </div>
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                <!-- Actual body / content -->
+                    <div class="col-12">
+                        <div id="login-out" style="margin-bottom:10px;">
+                            
+                        </div>
+                        <form id="plform" class="plform">
+                            Plugin Name: <input id="plname" type="text" placeholder="Plugin name"/>
+                            Plugin Description: <input id="pldesc" type="text" placeholder="Plugin Desc (Brief)"/>
+                            Plugin Info: <textarea id="plinfo" form="plform" placeholder="Any other information you want to provide about your plugin. Permissions, how to use, etc"></textarea>
+                            Plugin Tags:<br/>
+                            <input class="cb" type="checkbox" name="tags" value="admin"/> Admin<br/>
+                            <input class="cb" type="checkbox" name="tags" value="fun"/> Fun<br/>
+                            <input class="cb" type="checkbox" name="tags" value="util"/> Util<br/>
+                            <input class="cb" type="checkbox" name="tags" value="misc"/> Misc<br/>
+                            Plugin File: <input id="jarfile" type="file" accept=".jar"/>
+                            Submit: <button type="button" onclick="uploadForm()">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

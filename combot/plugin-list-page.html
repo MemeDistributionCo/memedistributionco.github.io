@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            ComBot Plugin List
+        </title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" type="text/css"/>
+        <link rel="stylesheet" href="css/main.css" type="text/css"/>
+                <script
+  src="http://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.10.0/firebase.js"></script>
+        <script>
+          // Initialize Firebase
+          var config = {
+            apiKey: "AIzaSyDMtD_eM0cebwnJWLXynMLige850l28lCg",
+            authDomain: "plugin-combot.firebaseapp.com",
+            databaseURL: "https://plugin-combot.firebaseio.com",
+            projectId: "plugin-combot",
+            storageBucket: "plugin-combot.appspot.com",
+            messagingSenderId: "1011557150803"
+          };
+          firebase.initializeApp(config);
+        </script>   
+        <script src="js/plugin-list.js"></script>
+    </head>
+    <body>
+        <div style="height:300px;">
+            <!-- Everything that goes before the main content -->
+        </div>
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                <!-- Actual body / content -->
+                    <div class="col-12" id="plugin-list"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script>
+        listPlugins();
+    </script>
+</html>

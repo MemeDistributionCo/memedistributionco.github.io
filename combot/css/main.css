@@ -1,0 +1,73 @@
+body {
+    
+}
+
+.plugin-container {
+    
+}
+
+.author-container {
+    
+}
+
+.comment-container {
+    padding-top:10px;
+}
+
+.content {
+    padding-left: 12%;
+    padding-right:12%; 
+}
+
+.plugin-container #plugin-title {
+    font-size: 32px;
+}
+
+.plugin-container #plugin-desc {
+    font-style: italic;
+}
+
+.plugin-container {
+    font-weight: 700;
+}
+
+.plugin-container .text {
+    font-weight: 300;
+}
+
+form.plform input {
+    display: block;
+    margin-bottom: 10px;
+}
+
+form.plform input.cb {
+    display: inline-block;
+}
+
+form.plform textarea {
+    display: block;
+    width: 50%;
+}
+
+form.plform {
+    width: 100%;
+    display: block;
+}
+
+.plugin-item {
+    padding:15px;
+    border: 1px solid black;
+}
+
+.plugin-list {
+    width:100%;
+}
+
+.plugin-item .name {
+    font-weight: 700;
+}
+
+.plugin-item desc {
+    font-style: italic;
+    font-weight: lighter;
+}
