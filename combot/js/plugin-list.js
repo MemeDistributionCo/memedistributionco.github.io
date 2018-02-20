@@ -1,4 +1,6 @@
-
+$(document).ready(function(f) {
+    listPlugins();
+});
 
 function listPlugins() {
     firebase.database().ref("approvedPlugins").once("value").then(function(data) {
@@ -23,6 +25,7 @@ function listPlugins() {
             htmlFin+="</div>";
         }
         $("#plugin-list").html(htmlFin);
+        
     });
     
 }
