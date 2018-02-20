@@ -9,7 +9,7 @@ function listPlugins() {
             htmlFin+="<div class=\"row plugin-item\">";
             
             htmlFin+="<div class=\"col-2\">";
-            htmlFin+="<a href=\"/plugin-display-page.html?loc=approvedPlugins/" + key + "\">" + plugin.pluginName + "</a>";
+            htmlFin+="<a href=\"./plugin-display-page.html?loc=approvedPlugins/" + key + "\">" + plugin.pluginName + "</a>";
             htmlFin+="</div>";
             
             htmlFin+="<div class=\"col-6\">";
