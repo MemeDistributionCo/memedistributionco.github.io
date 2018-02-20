@@ -25,6 +25,22 @@ function fixPluginInfo(infoStr) {
         newText+=infoStr.substr(index+5);
         infoStr = newText;
     }
+    
+    while(infoStr.includes("&lt;")) {
+        var index = infoStr.indexOf("&lt;");
+        var newText = infoStr.substr(0,index);
+        newText+="<";
+        newText+=infoStr.substr(index+4);
+        infoStr = newText;
+    }
+    
+    while(infoStr.includes("&gt;")) {
+        var index = infoStr.indexOf("&gt;");
+        var newText = infoStr.substr(0,index);
+        newText+=">";
+        newText+=infoStr.substr(index+4);
+        infoStr = newText;
+    }
     return infoStr;
 }
 
