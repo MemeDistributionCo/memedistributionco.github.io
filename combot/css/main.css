@@ -71,3 +71,49 @@ form.plform {
     font-style: italic;
     font-weight: lighter;
 }
+
+.hero {
+    background-color: lightgrey;
+    background-image:url("../img/combot.png");
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 200px;
+    text-align: center;
+}
+
+table.button-table {
+    width:100%;
+    text-align: center;
+}
+
+table td {
+    border:1px solid black;
+    border-radius: 20px;
+}
+
+
+.hero h1 {
+    color:white;
+    font-size: 128px;
+    font-weight: bold;
+    letter-spacing: 10px;
+    padding-top: 90px;
+    text-shadow:0px 0px 60px skyblue;
+}
+
+.hero a:hover {
+    text-decoration: none;
+}
+
+p {
+    padding-top:20px;
+}
+.hero.tall {
+    height: 400px;
+}
+
+.content {
+    margin-top: 20px;
+    width:100%;
+}
