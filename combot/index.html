@@ -14,7 +14,17 @@
             <a href="./index.html"><h1>ComBot</h1></a>
         </div>
         <div class="content">
-            <div class="containe-fluid">
+            <div class="container-fluid">
+                <div clsas="row">
+                    <div class="offset-md-2 col-md-8 col-s-12">
+                        <div class="row">
+                            <div class="col-3">Live Bot Count: <span class="stat" id="botCount">0</span></div>
+                            <div class="col-3">Present on <span class="stat" id="guildCount">0</span> server(s)</div>
+                            <div class="col-3">Member Count: <span class="stat" id="memberCount">0</span></div>
+                            <div class="col-3">Average of <span class="stat" id="plPSCount">0</span> plugins per bot</div>
+                        </div>
+                    </div>
+                </div>
                 <div class="row">
                     <div class="offset-md-2 col-md-8 col-s-12">
                     <p>This site is a work in progress. As the ComBot team is incredibly small at the moment, a lot more attention is being focused on ComBot itself and plugins for it rather than this site. However, small updates wille be applied to this site every so often.</p>
@@ -36,4 +46,17 @@
             </div>
         </div>
     </body>
+    <script>
+        $(document).ready(function (e) {
+            $.ajax({
+                url:"https://us-central1-plugin-combot.cloudfunctions.net/onStatsRequest",
+                
+            }).done(function(x) {
+                $("#botCount").html(x.liveBots);
+                $("#guildCount").html(x.guilds);
+                $("#memberCount").html(x.totalMembers);
+                $("#plPSCount").html(x.averagePluginsPerBot);
+            });
+        });
+    </script>
 </html>
