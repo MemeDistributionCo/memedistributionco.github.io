@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
+    <meta charset="UTF-8">
     <center><div style="font-size:3rem;font-family:monospace;" id="yeehaw"></div></center>
     <script>
         function updateTime() {
-            var destinationTime = 1534217400000;
+            var destinationTime = 1550239200000;
             var currentTime = new Date().getTime();
             var timeUntilDestination = destinationTime - currentTime;
             console.log(currentTime + " ----- " + timeUntilDestination);
@@ -14,7 +15,7 @@
             var minutesUntilDestination = Math.floor(timeUntilDestination / 60000);
             timeUntilDestination = timeUntilDestination - (minutesUntilDestination * 60000);
             var secondsUntilDestination = Math.floor(timeUntilDestination / 1000);
-            document.getElementById("yeehaw").innerHTML = daysUntilDestination + " Days, " + hoursUntilDestination + " hours, " + minutesUntilDestination + " minutes, and " + secondsUntilDestination + " seconds until release.";
+            document.getElementById("yeehaw").innerHTML = daysUntilDestination + " Days, " + hoursUntilDestination + " hours, " + minutesUntilDestination + " minutes, and " + secondsUntilDestination + " seconds or less until カツコン!!!";
             setTimeout(updateTime, 1000);
         }
         setTimeout(updateTime, 0);
